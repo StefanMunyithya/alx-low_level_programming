@@ -1,14 +1,19 @@
 /*
  * Outputs string using puts function
  *
- * returns 0 if ok
+ *
  */
 
 #include<stdio.h>
 
-int main()
+/*
+ * main - Starting point of program
+ *
+ * Returns 0 if executed well
+ */
+
+int main(void)
 {
-	puts("Programming is like building a multilingual puzzle\n");
-	
+	puts("\"Programming is like building a multilingual puzzle\n");
 	return 0;
 }
