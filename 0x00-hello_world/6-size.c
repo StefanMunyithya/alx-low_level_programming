@@ -2,7 +2,6 @@
  * This program prints sizes of char, int, long int
  * long long int and float types in bytes
  */
-
 #include<stdio.h>
 
 /**
@@ -10,7 +9,6 @@
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
 	printf("Size of a char: %ld byte(s)\n", sizeof(char));
