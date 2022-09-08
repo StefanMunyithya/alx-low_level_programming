@@ -1,13 +1,16 @@
 /**
- * This program prints sizes in bytes of types used in c
+ * This program prints sizes of char, int, long int
+ * long long int and float types in bytes
  */
+
 #include<stdio.h>
 
 /**
  * main - Entry point
  *
- * Returns: Always 0 (Success)
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
 	printf("Size of a char: %ld byte(s)\n", sizeof(char));
