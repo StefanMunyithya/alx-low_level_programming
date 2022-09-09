@@ -1,7 +1,3 @@
-/**
- * This program prints sizes of char, int, long int
- * long long int and float types in bytes
- */
 #include<stdio.h>
 
 /**
