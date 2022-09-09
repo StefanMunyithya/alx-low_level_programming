@@ -5,13 +5,13 @@
 /**
  * main - Entry point
  *
- * Return: Returns 0 if exceuted well  
+ * Return: Returns 0 if executed well
  */
 int main(void)
 {
 	int n;
+	
 	srand(time(0));
-
 	n = rand() - RAND_MAX / 2;
 
 	if (n > 0)
