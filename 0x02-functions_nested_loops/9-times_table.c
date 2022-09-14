@@ -18,20 +18,29 @@ void times_table(void)
 			int mult;
 
 			mult = i * j;
-
-			if (mult < 10)
+			
+			if (j == 0)
 				_putchar('0' + mult);
 			else
 			{
-				_putchar('0' + (mult / 10));
-				_putchar('0' + (mult % 10));
+
+				if (mult < 10)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar('0' + mult);
+				}
+
+				else
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar('0' + (mult / 10));
+					_putchar('0' + (mult % 10));
+				}
 			}
 
-			if (j == 9)
-				break;
-
-			_putchar(',');
-			_putchar(' ');
 		}
 		_putchar('\n');
 	}
