@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-int _isalpha(int c);
+int print_last_digit(int n);
 
 int main(void)
 {
-	printf("%d\n",_isalpha(65));
+	printf("%d\n",print_last_digit(98));
 }
