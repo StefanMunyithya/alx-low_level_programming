@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-int print_last_digit(int n);
+void jack_bauer(void);
 
 int main(void)
 {
-	printf("%d\n",print_last_digit(98));
+	jack_bauer();
 }
