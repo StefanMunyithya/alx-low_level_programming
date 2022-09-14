@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-void times_table(void);
+void print_to_98(int n);
 
 int main(void)
 {
-	times_table();
+	print_to_98(100);
 }
