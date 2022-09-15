@@ -3,11 +3,6 @@
 
 int main(void)
 {
-	char c;
-
-	c = 'a';
-
-	printf("%c is uppercase. %d", c, _isupper(c));
-
+	print_diagonal(10);
 	return (0);
 }
