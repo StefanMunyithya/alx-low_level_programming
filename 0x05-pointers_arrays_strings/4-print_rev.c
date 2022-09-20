@@ -30,5 +30,6 @@ void print_rev(char *s)
 		--s;
 		c = *s;
 	}
+	_putchar('\n');
 
 }
