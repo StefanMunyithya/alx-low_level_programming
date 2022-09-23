@@ -10,7 +10,8 @@ char *cap_string(char *str)
 	char *sep;
 	int i;
 	int word;
-	char a[] = {',', ';', '.', '!', '?', '"', '(', ')', '{', '}', '\t', '\v', '\n', ' ', '\0'};
+	char a[] = {',', ';', '.', '!', '?', '"', '(',
+			')', '{', '}', '\t', '\v', '\n', ' ', '\0'};
 
 	p = str;
 	sep = a;
@@ -18,8 +19,6 @@ char *cap_string(char *str)
 	if ('a' <= *p && *p <= 'z')
 		*p = 'A' + *p - 'a';
 	++p;
-
-
 	while (*p != '\0')
 	{
 		word = 0;
