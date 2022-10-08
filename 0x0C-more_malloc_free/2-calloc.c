@@ -5,7 +5,7 @@
  * an array of nmemb elements of size bytes each and
  * returns a pointer to the allocated memory.
  * @nmemb: Number of elements
- * @size: Number of bytes of eache element
+ * @size: Number of bytes of each element
  *
  * Return: Void pointer
  * NULL if error
@@ -13,7 +13,6 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int prod;
-	unsigned int i;
 	void *p;
 
 	if (nmemb == 0 || size == 0)
