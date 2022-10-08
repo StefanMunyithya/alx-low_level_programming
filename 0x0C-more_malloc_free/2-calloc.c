@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * _calloc - The _calloc function allocates memory for
@@ -19,12 +20,15 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 
 	prod = nmemb * size;
+
 	if ((prod / nmemb) != size)
 		return (NULL);
+
 	p = malloc(prod);
+
 	if (p == NULL)
 		return (NULL);
-
+	p = memset(p, '\0', prod);
 	return (p);
 
 
