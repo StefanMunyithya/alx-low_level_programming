@@ -1,12 +1,14 @@
 #include <stddef.h>
+#include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 #include "3-calc.h"
 
 /**
  * get_op_func - Gets the appropriate function based on
  * the provided operator.
  * @s: Operator
- * 
+ *
  * Return: Pointer to the appropriate function
  */
 
@@ -21,7 +23,7 @@ int (*get_op_func(char *s))(int, int)
 			{NULL, NULL}
 		     };
 	int i;
-	
+
 	i = 0;
 
 	while (i < 5)
@@ -30,6 +32,7 @@ int (*get_op_func(char *s))(int, int)
 			return (ops[i].f);
 		++i;
 	}
-		return (NULL);
+	printf("Error\n");
+	exit(99);
 
 }
