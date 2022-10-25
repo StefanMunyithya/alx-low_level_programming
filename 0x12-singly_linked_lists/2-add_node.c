@@ -8,18 +8,15 @@
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t node;
 	list_t *ptr;
 
-	node.str = strdup(str);
-	ptr = &node;
+	ptr = malloc(sizeof(list_t));
+	ptr->str = strdup(str);
+	ptr->len = strlen(str);
 
-	if (*head == NULL)
+	if (head == NULL)
 		return (NULL);
-	node.next = *head;
-
-	if (ptr == NULL)
-		return (NULL);
-
+	ptr->next = *head;
+	*head = ptr;
 	return (ptr);
 }
