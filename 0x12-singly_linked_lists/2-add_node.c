@@ -2,7 +2,7 @@
 /**
  * add_node - Adds node to the head of linked list
  * @head: Double pointer to head
- * @str:
+ * @str: Node data
  *
  * Return: Pointer to new head node.
  */
