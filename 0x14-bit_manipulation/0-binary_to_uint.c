@@ -16,10 +16,14 @@ unsigned int binary_to_uint(const char *b)
 
 	if (b == NULL)
 		return (0);
-	pow = 7;
+	pow = 0;
 	num = 0;
 	pos = 0;
+
 	while (*(b + pos) != '\0')
+		pos++;
+	pos--;
+	while (pos >= 0)
 	{
 		if (*(b + pos) != '0' && *(b + pos) != '1')
 			return (0);
@@ -27,8 +31,8 @@ unsigned int binary_to_uint(const char *b)
 		{
 			num += _pow(2, pow);
 		}
-		pos++;
-		pow--;
+		pos--;
+		pow++;
 
 	}
 	return (num);
@@ -40,7 +44,7 @@ unsigned int binary_to_uint(const char *b)
  * @a: Number to be raised
  * @b: Index
  *
- * Return: a^bi
+ * Return: a^b
  */
 int _pow(int a, int b)
 {
