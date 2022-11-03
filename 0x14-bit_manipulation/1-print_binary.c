@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 int mult_less(unsigned long int n);
 /**
@@ -20,7 +19,6 @@ void print_binary(unsigned long int n)
 		return;
 	}
 	power = mult_less(n);
-	printf("Power = %d\n", power);
 	if (power == 0)
 	{
 		_putchar('1');
