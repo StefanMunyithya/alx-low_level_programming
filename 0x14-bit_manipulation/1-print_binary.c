@@ -1,0 +1,62 @@
+#include "main.h"
+#include <stdio.h>
+
+int mult_less(unsigned long int n);
+/**
+ * print_binary - Prints the binary representation of
+ * a number.
+ * @n: Number
+ *
+ * Return: Void
+ */
+void print_binary(unsigned long int n)
+{
+	int power;
+	int i;
+
+	if (n == 0)
+	{
+		_putchar('0');
+		return;
+	}
+	power = mult_less(n);
+	printf("Power = %d\n", power);
+	if (power == 0)
+	{
+		_putchar('1');
+		return;
+	}
+	for (i = power; i >= 0; i--)
+	{
+		if (n >= _pow(2, i))
+		{
+			_putchar('1');
+			n = n - _pow(2, i);
+		}
+		else
+			_putchar('0');
+	}
+
+}
+
+/**
+ * mult_less - Returns power of largest multiple of two
+ * less than ot equal to n
+ * @n: Number to be converted to binary
+ *
+ * Return: Power
+ */
+int mult_less(unsigned long int n)
+{
+	int power;
+
+	power = 0;
+	while (_pow(2, power) < n)
+	{
+		power++;
+	}
+	if (_pow(2, power) == n)
+		return (power);
+	power--;
+	return (power);
+}

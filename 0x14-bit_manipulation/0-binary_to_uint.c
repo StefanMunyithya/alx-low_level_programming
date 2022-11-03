@@ -1,6 +1,6 @@
 #include "main.h"
 
-int _pow(int a, int b);
+unsigned long int _pow(int a, int b);
 /**
  * binary_to_uint - Connverts binary to int
  * @b: Pointer to character string
@@ -46,7 +46,7 @@ unsigned int binary_to_uint(const char *b)
  *
  * Return: a^b
  */
-int _pow(int a, int b)
+unsigned long int _pow(int a, int b)
 {
 	int index;
 	int product;
