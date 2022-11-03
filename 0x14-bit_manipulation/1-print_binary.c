@@ -1,6 +1,7 @@
 #include "main.h"
 
 int mult_less(unsigned long int n);
+unsigned long int _pow(int a, int b);
 /**
  * print_binary - Prints the binary representation of
  * a number.
@@ -57,4 +58,27 @@ int mult_less(unsigned long int n)
 		return (power);
 	power--;
 	return (power);
+}
+/**
+ * _pow - Raises a to power b
+ * @a: Number to be raised
+ * @b: Index
+ *
+ * Return: a^b
+ */
+unsigned long int _pow(int a, int b)
+{
+	int index;
+	int product;
+
+	index = 1;
+	product = a;
+	if (a != 0 && b == 0)
+		return (1);
+	while (index < b)
+	{
+		product *= a;
+		index++;
+	}
+	return (product);
 }
