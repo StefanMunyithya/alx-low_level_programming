@@ -37,6 +37,11 @@ int main(int argc, char *argv[])
 	buf = malloc(sizeof(char) * COUNT);
 	chars_read = read(file_from, buf, COUNT);
 
+	if (chars_read == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
 	while (chars_read != 0)
 	{
 		chars_written = write(file_to, buf, COUNT);
@@ -46,6 +51,11 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 		chars_read = read(file_from, buf, COUNT);
+		if (chars_read == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
+		}
 	}
 	fd_close = close(file_from);
 	if (fd_close == -1)
