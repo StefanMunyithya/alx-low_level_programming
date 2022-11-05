@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	int fd_close;
 	char *buf;
 	ssize_t chars_written;
-	size_t chars_read;
+	ssize_t chars_read;
 
 	if (argc != 3)
 	{
