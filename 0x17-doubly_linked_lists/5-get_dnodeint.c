@@ -10,15 +10,11 @@
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	unsigned int current_index;
-	size_t len;
 
 	if (head == NULL)
 		return (NULL);
-	len = dlistint_len(head);
 	current_index = 0;
 
-	if (index >= len)
-		return (NULL);
 	while (head->next != NULL)
 	{
 		if (current_index == index)
@@ -28,4 +24,5 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	}
 	if (current_index == index)
 		return (head);
+	return (NULL);
 }
